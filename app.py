@@ -9,9 +9,16 @@ def hello_world():
     return 'Hello World!'
 
 
+
+
 @app.route('/welcome/<name>')
 def get_welcome(name):
-    # the current hour of the day
+    """
+
+    :param name:
+    :return: message based on daytime
+    """
+    # current hour of the day
     hour = datetime.now().hour
 
     greeting = ""
@@ -26,8 +33,8 @@ def get_welcome(name):
     elif (18 <= hour < 24):
         greeting = "Good evening"
 
-        greeting = greeting + " " + name
-        print(greeting)
+    greeting = greeting + " " + name
+    print(greeting)
 
     return greeting
 
