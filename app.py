@@ -30,7 +30,7 @@ def get_welcome(name):
         greeting = "Good mid-day"
     elif (14 <= hour < 18):
         greeting = "Good afternoon"
-    elif (18 <= hour < 24):
+    else:
         greeting = "Good evening"
 
     greeting = greeting + " " + name
